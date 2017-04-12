@@ -18,10 +18,8 @@ import java.util.ArrayList;
  */
 
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
-  private int[]  data;
   public class ViewHolder extends RecyclerView.ViewHolder {
     private SimpleDraweeView imageView;
-    private int[]  data;
     public ViewHolder(View v) {
       super(v);
       imageView = (SimpleDraweeView)v;
@@ -31,7 +29,6 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
 
   private ArrayList<SearchTask.Photo> photoList = new ArrayList<>();
   public void setList(ArrayList<SearchTask.Photo> list) {
-    Log.e("MyAdapter", "setList " + list.size());
     photoList = list;
     notifyDataSetChanged();
   }
